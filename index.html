@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Wireframe Index — Teyseer Group</title>
+<meta name="description" content="Teyseer Group wireframe index — About Teyseer navigation section.">
+<link rel="stylesheet" href="teyseer.css">
+<style>
+.idx-hero {
+  padding: 80px 0 80px;
+  position: relative;
+  overflow: hidden;
+}
+.idx-hero .water {
+  position: absolute;
+  right: -160px; top: 40px;
+  width: 540px; height: 540px;
+  opacity: 0.05; pointer-events: none;
+}
+@media (max-width: 1024px) { .idx-hero .water { display: none; } }
+
+/* Top eyebrow */
+.idx-eyebrow {
+  display: inline-flex; align-items: center; gap: 14px;
+  font-family: var(--mono); font-size: 11px;
+  letter-spacing: 0.18em; color: var(--blue);
+  text-transform: uppercase; margin-bottom: 20px;
+}
+.idx-eyebrow .dash { width: 28px; height: 1px; background: var(--blue); display: inline-block; }
+
+/* Page title block */
+.idx-title-block { margin-bottom: 48px; }
+.idx-title-block h1 { margin: 0 0 10px; }
+.idx-title-block .idx-subtitle {
+  font-size: 15px; color: var(--muted); line-height: 1.5; max-width: 56ch;
+  margin: 0;
+}
+
+
+/* Section label above grids */
+.idx-section-label {
+  display: flex; align-items: center; gap: 16px;
+  margin-bottom: 0;
+  padding: 14px 0 14px;
+  border-top: 1px solid var(--line);
+}
+.idx-section-label .lbl-tag {
+  font-family: var(--mono); font-size: 10px;
+  letter-spacing: 0.2em; text-transform: uppercase;
+  color: var(--paper); background: var(--blue);
+  padding: 3px 10px;
+}
+.idx-section-label .lbl-name {
+  font-family: var(--mono); font-size: 11px;
+  letter-spacing: 0.16em; text-transform: uppercase;
+  color: var(--blue-deep); font-weight: 500;
+}
+.idx-section-label .lbl-desc {
+  margin-left: auto;
+  font-family: var(--mono); font-size: 10px;
+  letter-spacing: 0.14em; text-transform: uppercase;
+  color: var(--muted);
+}
+
+/* Grids */
+.idx-grid {
+  display: grid; grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+  background: var(--line);
+  border: 1px solid var(--line);
+}
+.idx-grid + .idx-section-label { margin-top: 40px; }
+.idx-grid.cols-2 { grid-template-columns: repeat(2, 1fr); }
+@media (max-width: 900px) {
+  .idx-grid, .idx-grid.cols-2 { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 540px) {
+  .idx-grid, .idx-grid.cols-2 { grid-template-columns: 1fr; }
+}
+
+/* Cards */
+.idx-card {
+  background: var(--paper);
+  padding: 32px 28px 28px;
+  display: flex; flex-direction: column; gap: 10px;
+  transition: background 200ms;
+  min-height: 280px;
+  text-decoration: none;
+}
+.idx-card:hover { background: var(--sky-soft); }
+.idx-card .ix-num {
+  font-family: var(--mono); font-size: 10.5px;
+  letter-spacing: 0.18em; color: var(--blue);
+}
+.idx-card h2 {
+  font-family: var(--serif); font-size: clamp(22px, 2.2vw, 30px);
+  font-weight: 700; color: var(--blue-deep);
+  letter-spacing: -0.005em;
+  margin: 4px 0 0; line-height: 1.15;
+}
+.idx-card .ix-blurb {
+  font-size: 13.5px; line-height: 1.6; color: var(--muted);
+}
+.idx-card .ix-meta {
+  margin-top: auto;
+  padding-top: 14px;
+  border-top: 1px solid var(--line-soft);
+  display: flex; flex-direction: column; gap: 4px;
+  font-family: var(--mono); font-size: 10px;
+  letter-spacing: 0.14em; text-transform: uppercase;
+  color: var(--muted);
+}
+.idx-card .ix-meta .k { color: var(--blue); }
+.idx-card .ix-arrow {
+  margin-top: 12px;
+  display: inline-flex; align-items: center; gap: 6px;
+  font-family: var(--mono); font-size: 11px;
+  letter-spacing: 0.18em; text-transform: uppercase;
+  color: var(--blue); font-weight: 500;
+}
+.idx-card:hover .ix-arrow span:last-child { transform: translateX(4px); }
+.idx-card .ix-arrow span:last-child { display: inline-block; transition: transform 200ms; }
+</style>
+</head>
+<body data-screen-label="Wireframe Index">
+
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="pagebar" role="banner">
+  <div class="wrap">
+    <div class="pb-row pb-bottom">
+      <a href="index.html" class="brand" aria-label="Teyseer Group">
+        <span class="mark" aria-hidden="true">
+          <svg viewBox="0 0 36 36" fill="none">
+            <rect x="6" y="6" width="24" height="24" fill="#2A3C8E"></rect>
+            <rect x="13.5" y="13.5" width="9" height="9" transform="rotate(45 18 18)" fill="#A6A8BA"></rect>
+            <rect x="16.5" y="16.5" width="3" height="3" transform="rotate(45 18 18)" fill="#F4F3EF"></rect>
+          </svg>
+        </span>
+        <span>
+          <div class="name">Teyseer</div>
+          <div class="tag">Since 1968</div>
+        </span>
+      </a>
+      <div class="anchornav-wrap">
+        <nav class="anchornav" id="anchornav" aria-label="On this page">
+          <a href="#about-teyseer" class="active">About Teyseer</a>
+          <a href="#companions">References</a>
+        </nav>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+<section class="idx-hero pattern-bg" id="overview">
+  <svg class="water" viewBox="0 0 200 200" aria-hidden="true">
+    <rect x="40" y="40" width="120" height="120" fill="none" stroke="#2A3C8E" stroke-width="0.6"></rect>
+    <rect x="70" y="70" width="60" height="60" transform="rotate(45 100 100)" fill="none" stroke="#2A3C8E" stroke-width="0.6"></rect>
+    <rect x="92" y="92" width="16" height="16" transform="rotate(45 100 100)" fill="#2A3C8E"></rect>
+  </svg>
+
+  <div class="wrap">
+
+    <!-- Page identity -->
+    <div class="idx-eyebrow">
+      <span>Teyseer Group</span><span class="dash"></span><span>Wireframe Index</span>
+    </div>
+
+    <div class="idx-title-block">
+      <h1 class="h1 b">Teyseer<br>Wireframe Index</h1>
+      <p class="idx-subtitle">A navigable index of all wireframe pages produced for the Teyseer Group website. Each card below opens its respective wireframe in a new tab.</p>
+    <p class="idx-subtitle" style="margin-top: 10px; color: var(--blue); font-weight: 500;">All of these pages are for the &ldquo;About Us&rdquo; section.</p>
+    </div>
+
+    <!-- ── About Teyseer nav section ─────────────────────────────── -->
+    <div class="idx-section-label" id="about-teyseer">
+      <span class="lbl-tag">Main Nav</span>
+      <span class="lbl-name">About Teyseer</span>
+      <span class="lbl-desc">9 pages</span>
+    </div>
+
+    <div class="idx-grid">
+
+      <a class="idx-card" href="aboutus.html" target="_blank">
+        <div class="ix-num">01 / About Teyseer</div>
+        <h2>About<br>Us</h2>
+        <p class="ix-blurb">A 100% Qatari group of eighteen specialist companies, headquartered in Doha and serving the State of Qatar since 1968.</p>
+        <div class="ix-meta">
+          <div><span class="k">Who we are</span></div>
+          <div><span class="k">What we do</span></div>
+        </div>
+        <div class="ix-arrow"><span>Open</span><span>→</span></div>
+      </a>
+
+      <a class="idx-card" href="history.html" target="_blank">
+        <div class="ix-num">02 / About Teyseer</div>
+        <h2>Our<br>History</h2>
+        <p class="ix-blurb">From a small trading office in 1968 to a multi-sector Qatari group serving the State of Qatar.</p>
+        <div class="ix-meta">
+          <div><span class="k">Heritage</span></div>
+          <div><span class="k">Evolution timeline</span></div>
+        </div>
+        <div class="ix-arrow"><span>Open</span><span>→</span></div>
+      </a>
+
+      <a class="idx-card" href="visionmission.html" target="_blank">
+        <div class="ix-num">03 / About Teyseer</div>
+        <h2>Vision &amp;<br>Mission</h2>
+        <p class="ix-blurb">The purpose, principles, values and approach behind Teyseer — the operating framework set by the Brand Book.</p>
+        <div class="ix-meta">
+          <div><span class="k">Vision &amp; mission</span></div>
+          <div><span class="k">Brand essence</span></div>
+        </div>
+        <div class="ix-arrow"><span>Open</span><span>→</span></div>
+      </a>
+
+      <a class="idx-card" href="partners.html" target="_blank">
+        <div class="ix-num">04 / About Teyseer</div>
+        <h2>Our<br>Partners</h2>
+        <p class="ix-blurb">Forty-six international principals across nine verticals — authorised distributorships, agencies and brand representations.</p>
+        <div class="ix-meta">
+          <div><span class="k">Vertical filter</span></div>
+          <div><span class="k">46 principals</span></div>
+        </div>
+        <div class="ix-arrow"><span>Open</span><span>→</span></div>
+      </a>
+
+      <a class="idx-card" href="portfolio.html" target="_blank">
+        <div class="ix-num">05 / About Teyseer</div>
+        <h2>Our<br>Portfolio</h2>
+        <p class="ix-blurb">38 projects delivered across Qatar's national economy — from EV launches and FIFA World Cup operations to Msheireb Downtown Doha.</p>
+        <div class="ix-meta">
+          <div><span class="k">Sector slider</span></div>
+          <div><span class="k">38 projects</span></div>
+        </div>
+        <div class="ix-arrow"><span>Open</span><span>→</span></div>
+      </a>
+
+      <a class="idx-card" href="awards.html" target="_blank">
+        <div class="ix-num">06 / About Teyseer</div>
+        <h2>Awards &amp;<br>Certifications</h2>
+        <p class="ix-blurb">ISO standards, Qatari regulatory licences, twelve partner recognitions and a flagship awards timeline from 1998 through 2024.</p>
+        <div class="ix-meta">
+          <div><span class="k">Tabbed certs / licences</span></div>
+          <div><span class="k">Year timeline</span></div>
+        </div>
+        <div class="ix-arrow"><span>Open</span><span>→</span></div>
+      </a>
+
+      <a class="idx-card" href="chairman.html" target="_blank">
+        <div class="ix-num">07 / About Teyseer</div>
+        <h2>Chairman's<br>Message</h2>
+        <p class="ix-blurb">A concise message from Khalifa A.R. Al Mannai — the path from 1968 to where the Group is headed under Qatar National Vision 2030.</p>
+        <div class="ix-meta">
+          <div><span class="k">Letter format</span></div>
+          <div><span class="k">Founder tribute</span></div>
+        </div>
+        <div class="ix-arrow"><span>Open</span><span>→</span></div>
+      </a>
+
+      <a class="idx-card" href="qnv.html" target="_blank">
+        <div class="ix-num">08 / About Teyseer</div>
+        <h2>Qatar National<br>Vision 2030</h2>
+        <p class="ix-blurb">How Teyseer Group aligns with Qatar's 2030 vision — human, social, economic and environmental development pillars.</p>
+        <div class="ix-meta">
+          <div><span class="k">Four pillars</span></div>
+          <div><span class="k">National alignment</span></div>
+        </div>
+        <div class="ix-arrow"><span>Open</span><span>→</span></div>
+      </a>
+
+      <a class="idx-card" href="sustainability.html" target="_blank">
+        <div class="ix-num">09 / About Teyseer</div>
+        <h2>Sustainability</h2>
+        <p class="ix-blurb">Environmental, social and governance — the practices and metrics by which Teyseer operates across Qatar.</p>
+        <div class="ix-meta">
+          <div><span class="k">ESG alignment</span></div>
+          <div><span class="k">In practice</span></div>
+        </div>
+        <div class="ix-arrow"><span>Open</span><span>→</span></div>
+      </a>
+
+    </div>
+
+    <!-- ── Reference documents ───────────────────────────────────── -->
+    <div class="idx-section-label" id="companions">
+      <span class="lbl-tag">Companion Docs</span>
+      <span class="lbl-name">References</span>
+      <span class="lbl-desc">2 documents</span>
+    </div>
+
+    <div class="idx-grid cols-2">
+
+      <a class="idx-card" href="benchmarks.html" target="_blank">
+        <div class="ix-num">10 / References</div>
+        <h2>Design<br>Benchmarks</h2>
+        <p class="ix-blurb">File-by-file external benchmarks consulted during design — reference image on the left and the takeaway on the right.</p>
+        <div class="ix-meta">
+          <div><span class="k">Per-file references</span></div>
+          <div><span class="k">Source URLs</span></div>
+        </div>
+        <div class="ix-arrow"><span>Open</span><span>→</span></div>
+      </a>
+
+      <a class="idx-card" href="contentprovenance.html" target="_blank">
+        <div class="ix-num">11 / References</div>
+        <h2>Content<br>References</h2>
+        <p class="ix-blurb">A section-by-section, page-by-page record of which content claim came from which primary source — verified, illustrative or benchmark.</p>
+        <div class="ix-meta">
+          <div><span class="k">Verified sources</span></div>
+          <div><span class="k">Illustrative flags</span></div>
+        </div>
+        <div class="ix-arrow"><span>Open</span><span>→</span></div>
+      </a>
+
+    </div>
+
+  </div>
+</section>
+
+</main>
+
+<script src="teyseer.js"></script>
+</body>
+</html>
